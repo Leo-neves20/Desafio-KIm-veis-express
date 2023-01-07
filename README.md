@@ -7,7 +7,7 @@ yarn
 ````
 <br>
 
-OU
+ou
 
 <br>
 
@@ -28,8 +28,6 @@ yarn dev
 <br>
 
 # **Sobre os testes**
-
-Essa aplicação possui testes, que serão utilizados para validar, se todas as regras de negócio foram aplicadas de maneira correta.
 
 Os testes estão localizados em `src/__tests__`.
 
@@ -53,31 +51,88 @@ Para rodar os testes é necessário que no seu terminal, você esteja dentro do 
 Estando no terminal e dentro do caminho correto, você poderá utilizar os comandos a seguir:
 
 ### Rodar todos os testes
+
 ````
 yarn test
 ````
+<br>
+
+ou
+
+<br>
+
+````
+npm test
+````
+
 #
 ### Rodar todos os testes e ter um log ainda mais completo
+
 ````
 yarn test --all
 ````
+
+<br>
+
+ou
+
+<br>
+
+````
+yarn test --all
+````
+
 #
 
 ### Rodar os testes de uma pasta específica
 `detalhe: repare que tests está envolvido por 2 underlines. Isso se chama dunder.`
+
 ````
 yarn test ./scr/__tests__/integration/<subpasta>
 ````
+<br>
+
+ou
+
+<br>
+
+````
+npm test ./scr/__tests__/integration/<subpasta>
+````
+
 #
 ### Rodar os testes de um arquivo específico
+
 ````
 yarn test ./scr/__tests__/integration/<subpasta>/<arquivo>
 ````
+<br>
+
+ou
+
+<br>
+
+````
+npm test ./scr/__tests__/integration/<subpasta>/<arquivo>
+````
+
 #
 ### Rodar um teste específico
+
 ````
 yarn test -t <describe ou test específico envolto em aspas>
 ````
+
+<br>
+
+ou
+
+<br>
+
+````
+npm test -t <describe ou test específico envolto em aspas>
+````
+
 ````
 \\ ex: yarn test -t "/categories"
 \\ rodaria os testes do describe "/categorias" no caminho
@@ -97,4 +152,3 @@ Após rodar um dos comandos aparecerá um log no seu terminal, contendo as infor
 
 
 
-### Agora que já sabe como iniciar o seu projeto e rodar os testes, é hora de colocar a mão no código!
