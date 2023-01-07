@@ -21,6 +21,12 @@ Com isso feito, para rodar sua aplicação, basta utilizar o comando
 yarn dev
 ````
 
+ou
+
+````
+npm dev
+````
+
 <br>
 
 # **Sobre os testes**
@@ -51,15 +57,14 @@ Estando no terminal e dentro do caminho correto, você poderá utilizar os coman
 ````
 yarn test
 ````
-<br>
 
 ou
 
-<br>
 
 ````
 npm test
 ````
+<br>
 
 #
 ### Rodar todos os testes e ter um log ainda mais completo
@@ -68,15 +73,13 @@ npm test
 yarn test --all
 ````
 
-<br>
-
 ou
-
-<br>
 
 ````
 yarn test --all
 ````
+
+<br>
 
 #
 
@@ -86,15 +89,15 @@ yarn test --all
 ````
 yarn test ./scr/__tests__/integration/<subpasta>
 ````
-<br>
 
 ou
 
-<br>
 
 ````
 npm test ./scr/__tests__/integration/<subpasta>
 ````
+
+<br>
 
 #
 ### Rodar os testes de um arquivo específico
@@ -102,15 +105,14 @@ npm test ./scr/__tests__/integration/<subpasta>
 ````
 yarn test ./scr/__tests__/integration/<subpasta>/<arquivo>
 ````
-<br>
 
 ou
 
-<br>
 
 ````
 npm test ./scr/__tests__/integration/<subpasta>/<arquivo>
 ````
+<br>
 
 #
 ### Rodar um teste específico
@@ -119,11 +121,8 @@ npm test ./scr/__tests__/integration/<subpasta>/<arquivo>
 yarn test -t <describe ou test específico envolto em aspas>
 ````
 
-<br>
-
 ou
 
-<br>
 
 ````
 npm test -t <describe ou test específico envolto em aspas>
