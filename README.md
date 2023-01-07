@@ -446,8 +446,4 @@ Rota responsável pelo agendamento de uma visita a um imóvel.
 }
 ````
 _______________________________________________________________________________________________________________________________________________________________________
-
-🔵 GET - /schedules/properties/<id-propriedade>
-
-*Rota listar todos os agendamentos de um imóvel. **(OBS: A rota só pode ser acessada apenas por administradores.)**
 	
