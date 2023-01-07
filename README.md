@@ -245,8 +245,209 @@ ________________________________________________________________________________
 
 _______________________________________________________________________________________________________________________________________________________________________
 
+🟢 **POST - /user/register**
 
 
+* Rota para fazer registro do usuário. ***Senha deve conter 8 dígitos, deve conter uma letra maiúscula, deve conter uma letra minúscula, deve conter um carácter especial, deve conter um número***
 
+     
+**Request:**
+````
+{
+	name: string,
+	email: string,
+	password: string,
+	confirm_password: string,
+	module: string
+}`
+````
+	
+**Response:** 
+````
+{
+    id: string,
+    name: string,
+    email: string,
+    module: string,
+    isActive: boolean, 
+    createdAt: Date,
+    updatedAt: Date,
+    deletedAt: Date,
+}
+````
 
+_______________________________________________________________________________________________________________________________________________________________________
 
+🟢 **POST - /login**
+
+* Rota para fazer o login.
+
+**Request:** 
+````
+{
+  email: string,
+  password: string
+}
+````
+
+**Response:** 
+````
+{
+  token: aoZJSJhOpjwQXDWKRtXz3HjucCaC08hw91vFxxswjIMzUNYxFefGoQZ75spo60XjgvCAWSFAtxPjdMnYpkxLH7E63aa2cf042609
+}
+````
+_______________________________________________________________________________________________________________________________________________________________________
+
+🟢 **POST - /categories**
+
+*Rota para criação de categorias. **(OBS: Não é possível cadastradas duas categorias com o mesmo nome e a rota pode ser acessada apenas por administradores.)**
+
+**Request:** 
+````
+{
+ name: string
+}
+````
+
+**Response:** 
+````
+{
+ id: string
+ name: string
+}
+````
+_______________________________________________________________________________________________________________________________________________________________________
+
+🔵 **GET - /categories**
+
+*Lista todas categorias. **(OBS: a rota não precisa de autenticação para ser acessada.)**
+
+**Response:** 
+````
+  [
+    {
+      id: string
+      name: string
+    },
+    {
+      id: string
+      name: string
+    }
+  ]
+
+````
+_______________________________________________________________________________________________________________________________________________________________________
+
+🔵 **GET - /categories/<id-categoria>/properties**
+
+*Rota listar todos os imóveis que pertencem a uma categoria.  **(OBS: a rota não precisa de autenticação para ser acessada.)**
+
+**Response:** 
+````
+  [
+    {
+      value: number
+      size: number
+      address:{
+         district: string
+         zipCode: string
+         number: string
+         city: string
+         state: string
+      }
+      categoryId: string
+      id: string
+      sold: boolean
+      createdAt: date
+      updatedAt: date
+    },
+    {
+      value: number
+      size: number
+      address:{
+         district: string
+         zipCode: string
+         number: string
+         city: string
+         state: string
+      }
+      categoryId: string
+      id: string
+      sold: boolean
+      createdAt: date
+      updatedAt: date
+    },
+  ]
+
+````
+_______________________________________________________________________________________________________________________________________________________________________
+
+🔵 **GET - /properties**
+
+*Rota listar todos os imóveis.  **(OBS: a rota não precisa de autenticação para ser acessada.)**
+
+**Response:** 
+````
+  [
+    {
+      value: number
+      size: number
+      address:{
+         district: string
+         zipCode: string
+         number: string
+         city: string
+         state: string
+      }
+      categoryId: string
+      id: string
+      sold: boolean
+      createdAt: date
+      updatedAt: date
+    },
+    {
+      value: number
+      size: number
+      address:{
+         district: string
+         zipCode: string
+         number: string
+         city: string
+         state: string
+      }
+      categoryId: string
+      id: string
+      sold: boolean
+      createdAt: date
+      updatedAt: date
+    },
+  ]
+
+````
+_______________________________________________________________________________________________________________________________________________________________________
+
+🟢 **POST - /schedules**
+
+Rota responsável pelo agendamento de uma visita a um imóvel.
+
+**Request:** 
+````
+{
+  date: string
+  hour: string
+  propertieId: string
+}
+````
+
+**Response:**
+````
+{
+  message
+}
+````
+_______________________________________________________________________________________________________________________________________________________________________
+
+🔵 GET - /schedules/properties/<id-propriedade>
+
+*Rota listar todos os agendamentos de um imóvel. **(OBS: A rota só pode ser acessada apenas por administradores.)**
+	
