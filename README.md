@@ -11,6 +11,7 @@ ou
 ````
 npm i
 ````
+
 <br>
 
 **Configure as variáveis de ambiente no seu .env**, passando as credenciais corretas para conectar em seu banco local
