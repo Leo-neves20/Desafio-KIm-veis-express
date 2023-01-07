@@ -6,8 +6,14 @@ Para inciar, é necessário instalar as dependências, que serão utilizadas nos
 yarn 
 ````
 <br>
+````
+npm i
+````
+
 ou
+
 <br>
+
 ````
 npm i
 ````
