@@ -148,6 +148,104 @@ ________________________________________________________________________________
 
 # 🏁 Rotas
 
+:heavy_exclamation_mark: **Pronto, agora seu banco de dados está conectado com sua Api. A Url base será** "https://localhost:3000" :heavy_exclamation_mark:
+
+🟢 **POST - /user**
+
+
+* Rota para fazer registro do usuário. 
+
+     
+**Request:**
+````
+{
+	name: string,
+	email: string,
+	password: string,
+	isAdm: boolean
+}`
+````
+	
+**Response:** 
+````
+{
+    id: string,
+    name: string,
+    email: string,
+    isAdm: boolean, 
+    createdAt: Date,
+    updatedAt: Date,
+}
+````
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+🔵 **GET - /users**
+
+* Rota para listar os usuários. **(OBS: A rota pode ser acessada apenas por administradores.)**
+
+**Response:** 
+````
+[
+  {
+    id: string,
+    name: string,
+    email: string,
+    isAdm: boolean, 
+    createdAt: Date,
+    updatedAt: Date,
+  },
+  {
+    id: string,
+    name: string,
+    email: string,
+    isAdm: boolean, 
+    createdAt: Date,
+    updatedAt: Date,
+  }
+]
+
+````
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+🟡 **PATCH - /user/<id-usuário>**
+
+* atualiza os dados do usuário. **(OBS: Não é possível atualizar os campos id, isAdm e isActive.)**
+
+:heavy_exclamation_mark: Apenas administradores podem atualizar qualquer usuário, usuários não-administradores podem apenas atualizar seu próprio usuário. :heavy_exclamation_mark:
+
+**Request:**
+````
+  	{
+      name?: string,
+      email?: string,
+    }
+````
+
+**Response:** 
+````
+    {
+      id: string,
+      name: string,
+      email: string,
+      isAdm: boolean, 
+      createdAt: Date,
+      updatedAt: Date,
+    }
+````
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+🔴 **DELETE - /user/<id-usuário>**
+
+* Excluí usuário **(OBS: a rota só pode ser acessada apenas por administradores.)**
+
+:heavy_exclamation_mark: Não é possível realizar um soft delete em um usuário inativo. :heavy_exclamation_mark:
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+
 
 
 
