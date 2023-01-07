@@ -7,8 +7,9 @@ yarn
 ````
 <br>
 OU
+<br>
 ````
-nomp i
+npm i
 ````
 <br>
 
