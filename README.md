@@ -298,6 +298,90 @@ ________________________________________________________________________________
 ````
 _______________________________________________________________________________________________________________________________________________________________________
 
+🟢 **POST - /properties**
+
+
+* Rota para fazer registro de uma Propiedade. 
+
+     
+**Request:**
+````
+{
+   value: number
+   size: number
+   address: {
+     district: string
+     zipCode: string
+     number?: string
+     city: string
+     state: string 
+   }
+   category:{
+     name: string
+   }
+   id: string
+   sold: boolean
+   createdAt: Date
+   updatedAt: Date
+}`
+````
+	
+**Response:** 
+
+````
+{
+   value: number
+   size: number
+   address: {
+     id: string
+     district: string
+     zipCode: string
+     number?: string
+     city: string
+     state: string 
+   }
+   category:{
+    id: string
+    name: string
+   }
+   id: string
+   sold: boolean
+   createdAt: Date
+   updatedAt: Date
+}
+````
+_______________________________________________________________________________________________________________________________________________________________________
+
+🔵 **GET - /users**
+
+* Rota lista todas as Propiedades. 
+
+**Response:** 
+
+````
+{
+   value: number
+   size: number
+   address: {
+     id: string
+     district: string
+     zipCode: string
+     number?: string
+     city: string
+     state: string 
+   }
+   category:{
+    id: string
+    name: string
+   }
+   id: string
+   sold: boolean
+   createdAt: Date
+   updatedAt: Date
+}
+````
+______________________________________________________________________________________________________________________________________________________________________
+
 🟢 **POST - /categories**
 
 *Rota para criação de categorias. **(OBS: Não é possível cadastradas duas categorias com o mesmo nome e a rota pode ser acessada apenas por administradores.)**
